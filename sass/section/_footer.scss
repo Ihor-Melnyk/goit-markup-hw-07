@@ -10,15 +10,11 @@
 .footer-logo-main {
   font-family: Raleway;
   color: var(--main-title-color);
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  @include font($fw: 700, $fs: 26px, $lh);
   letter-spacing: 0.03em;
 }
 .footer-logo-secondary {
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  @include font($fw: 700, $fs: 26px, $lh);
   letter-spacing: 0.03em;
   color: var(--fourth-tittle-color);
 }
