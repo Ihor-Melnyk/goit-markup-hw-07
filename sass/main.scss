@@ -1,21 +1,102 @@
-@import "./utils/variables.scss";
-@import "./base/reset";
-@import "./components/mixin.scss";
+/* --------------------HEADER------------------------- */
+.header {
+  display: flex;
+}
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  background-color: teal;
+}
+.header {
+}
+.header__logo {
+}
+.header__text {
+}
+.navigation {
+}
+.navigation__list {
+}
+.navigation__item {
+}
+.navigation__link {
+}
+.contacts {
+}
+.contacts__item {
+}
 
-@import "./section/header";
-@import "./section/hero";
-@import "./section/dignity";
-@import "./section/doing";
-@import "./section/command";
-@import "./section/clients";
-@import "./section/footer";
+.contacts__mail {
+}
 
-@import "./section/portfolio-filtr";
-@import "./section/works";
+.contacts__icon {
+}
 
-@import "./components/modal";
-@import "./components/container";
-@import "./components/section";
+.contacts__tel {
+}
+/* --------------------HERO---------------------------------- */
+.hero {
+}
+.hero__title {
+}
+.hero__btn {
+}
+/* --------------------ОСОБЕНОСТИ-------------------------------- */
+.dignity {
+}
+.dignity__list {
+}
+.dignity__thumb {
+}
+.dignity__item {
+}
+.dignity__icon {
+}
+.dignity__title {
+}
+.dignity__text {
+}
+/* --------------------ЧЕМ МЫ ЗАНИМАЕМСЯ------------------------- */
+.doing {
+}
+
+.doing__title {
+}
+
+.doing__list {
+}
+
+.doing__item {
+}
+
+.doing__img {
+}
+
+.box-img {
+}
+
+.box-img__text {
+}
+/* --------------------НАША КОМАНДА------------------------------ */
+
+// @import "./utils/variables.scss";
+// @import "./base/reset";
+// @import "./components/mixin.scss";
+
+// @import "./section/header";
+// @import "./section/hero";
+// @import "./section/dignity";
+// @import "./section/doing";
+// @import "./section/command";
+// @import "./section/clients";
+// @import "./section/footer";
+
+// @import "./section/portfolio-filtr";
+// @import "./section/works";
+
+// @import "./components/modal";
+// @import "./components/container";
+// @import "./components/section";
 
 /* --------------------HEADER------------------------- */
 
