@@ -1,7 +1,11 @@
 .command {
   background-color: $backgroundColorSecondary;
 }
-.command-list {
+
+.command-title {
+  margin-bottom: 50px;
+}
+.command__list {
   display: flex;
 }
 .command-item {
@@ -13,55 +17,41 @@
 .command-item:not(:nth-child(4n)) {
   margin-right: 30px;
 }
-.command-title {
-  margin-top: 0;
-  margin-bottom: 50px;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.67;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: var(--second-title-color);
-}
-.command-item-img {
+.command__img {
   display: block;
   max-width: 100%;
   height: auto;
   margin-top: 0;
   margin-bottom: 0;
 }
-.command-item-box {
+.contacts {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-.command-item-title {
+.contacts__title {
   margin-top: 0;
   margin-bottom: 10px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.187;
+  @include font(500, 16px, 1.187);
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--second-title-color);
 }
-.command-item-text {
+.contacts__text {
   margin-top: 0;
   margin-bottom: 16px;
-  font-size: 16px;
-  line-height: 1.187;
+  @include font(400, 16px, 1.187);
   text-align: center;
-  letter-spacing: 0.03em;
   color: var(--main-text-color);
 }
-.command-contacts-list {
+.contacts__list {
   display: flex;
   justify-content: center;
 }
-.command-contacts-item:not(:first-child) {
-  margin-left: 10px;
+.contacts__item {
+  &:not(:first-child) {
+    margin-left: 10px;
+  }
 }
-
-.command-thumb-link {
+.social__link {
   width: 44px;
   height: 44px;
   display: flex;
@@ -79,6 +69,6 @@
     background-color: $aktiveColor;
   }
 }
-.command-item-icon {
+.social__icon {
   fill: currentColor;
 }

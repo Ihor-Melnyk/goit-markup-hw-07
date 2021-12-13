@@ -1,3 +1,10 @@
+.works-item-text:hover,
+.works-item-text:focus,
+.works-title:focus,
+.works-title:hover {
+  color: var(--main-title-color);
+}
+
 .works {
   display: flex;
   flex-wrap: wrap;

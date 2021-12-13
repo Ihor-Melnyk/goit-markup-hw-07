@@ -1,22 +1,16 @@
 .clients-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
   margin-bottom: 50px;
-  letter-spacing: 0.03em;
-  color: var(--second-title-color);
 }
-.clients-list {
+.clients__list {
   display: flex;
   justify-content: center;
 }
-.clients-item {
+.clients__item {
   &:not(:first-child) {
     margin-left: 30px;
   }
 }
-.clients-link {
+.clients__link {
   display: flex;
   width: 170px;
   height: 92px;
@@ -34,6 +28,6 @@
     border: 1px solid $aktiveColor;
   }
 }
-.clients-logo {
+.clients__logo {
   fill: currentColor;
 }
