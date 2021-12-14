@@ -780,26 +780,17 @@ ul {
   border-radius: 4px;
 }
 
-.input__form:hover .form-icon {
-  color: #2196f3;
-  background-color: teal;
-}
-
-.icon-item {
-  fill: currentColor;
-}
-
-.input__form.textarea {
+.textarea {
   height: 120px;
   padding: 12px 16px;
   resize: none;
   font-weight: normal;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: #000000;
+  color: var(--subtitle-color);
 }
 
-textarea[placeholder="Введите текст"] {
+.textarea [placeholder="Введите текст"] {
   font-weight: normal;
   font-size: 12px;
   line-height: 1.17;
@@ -807,7 +798,7 @@ textarea[placeholder="Введите текст"] {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.form-icon {
+.input__item {
   margin: 0;
   position: absolute;
   top: 50%;
@@ -817,15 +808,19 @@ textarea[placeholder="Введите текст"] {
   transform: translateY(-50%);
 }
 
-.input__form:focus .form-icon,
-.input__form:hover .form-icon {
+.input__form:focus + .input__item,
+.input__form:hover + .input__item {
   color: #2196f3;
+}
+
+.input__icon {
+  fill: currentColor;
 }
 
 .checkbox {
   display: flex;
   align-items: center;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -833,7 +828,7 @@ textarea[placeholder="Введите текст"] {
   padding-left: 12px;
 }
 
-.checkbox > .checkbox-input {
+.checkbox > .checkbox__input {
   border: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -841,7 +836,7 @@ textarea[placeholder="Введите текст"] {
   position: absolute;
 }
 
-.chekbox-item {
+.chekbox__item {
   background-origin: border-box;
   border: 2px solid var(--second-title-color);
   border-radius: 2px;
@@ -850,14 +845,14 @@ textarea[placeholder="Введите текст"] {
   margin-right: 8.38px;
 }
 
-.checkbox-input:checked .chekbox-item {
-  border-color: var(--main-text-color);
-  background-color: var(--main-text-color);
+.checkbox__input:checked + .chekbox__item {
+  border-color: #2196f3;
+  background-color: #2196f3;
   background-origin: border-box;
 }
 
-.chekbox-link {
-  font-weight: normal;
+.chekbox__link {
+  font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -868,7 +863,7 @@ textarea[placeholder="Введите текст"] {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.chekbox-link:focus, .chekbox-link:hover {
+.chekbox__link:focus, .chekbox__link:hover {
   border: 2px solid #2196f3;
   border-radius: 4px;
   border-color: #2196f3;
@@ -884,10 +879,10 @@ textarea[placeholder="Введите текст"] {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
+  letter-spacing: 0.06em;
   display: flex;
   align-items: center;
   text-align: center;
-  letter-spacing: 0.06em;
   color: var(--fourth-tittle-color);
 }
 

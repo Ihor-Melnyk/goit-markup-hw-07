@@ -98,15 +98,7 @@
     border-radius: 4px;
   }
 }
-.input__form:hover .form-icon {
-  color: $aktiveColor;
-  background-color: teal;
-}
-
-.icon-item {
-  fill: currentColor;
-}
-.input__form.textarea {
+.textarea {
   height: 120px;
   padding: 12px 16px;
   resize: none;
@@ -114,51 +106,50 @@
   font-weight: normal;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: #000000;
-}
-textarea[placeholder="Введите текст"] {
-  font-weight: normal;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
+  color: var(--subtitle-color);
 
-  color: rgba(117, 117, 117, 0.5);
+  & [placeholder="Введите текст"] {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+  }
 }
 
-.form-icon {
+.input__item {
   margin: 0;
   position: absolute;
   top: 50%;
   left: 11px;
   color: var(--subtitle-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
   transform: translateY(-50%);
 
-  .input__form:focus &,
-  .input__form:hover & {
+  .input__form:focus + &,
+  .input__form:hover + & {
     color: $aktiveColor;
   }
+}
+.input__icon {
+  fill: currentColor;
 }
 .checkbox {
   display: flex;
   align-items: center;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include font($lh: 1.71);
   color: var(--main-text-color);
   padding-left: 12px;
 }
 
-.checkbox > .checkbox-input {
+.checkbox > .checkbox__input {
   border: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   position: absolute;
 }
-.chekbox-item {
+.chekbox__item {
   background-origin: border-box;
   border: 2px solid var(--second-title-color);
   border-radius: 2px;
@@ -166,18 +157,15 @@ textarea[placeholder="Введите текст"] {
   background-color: var(--fourth-tittle-color);
   margin-right: 8.38px;
 
-  .checkbox-input:checked & {
-    border-color: var(--main-text-color);
-    background-color: var(--main-text-color);
+  .checkbox__input:checked + & {
+    border-color: $aktiveColor;
+    background-color: $aktiveColor;
     background-origin: border-box;
   }
 }
 
-.chekbox-link {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+.chekbox__link {
+  @include font($lh: 1.71);
   color: $aktiveColor;
   text-decoration-line: underline;
   border-color: var(--fourth-tittle-color);
@@ -200,12 +188,10 @@ textarea[placeholder="Введите текст"] {
   padding: 10px 55px;
   margin: 30px auto 0;
 
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
+  @include font(700, 16px, 1.87, 0.06em);
+
   display: flex;
   align-items: center;
   text-align: center;
-  letter-spacing: 0.06em;
   color: var(--fourth-tittle-color);
 }
