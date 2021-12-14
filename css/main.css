@@ -697,11 +697,6 @@ ul {
   transition: opacity 1000ms, visibility 1000ms;
 }
 
-.backdrop.is-hidden .modal {
-  transform: scale(1.5) rotate(180deg) translate(1000px);
-  transition: transform 1000ms;
-}
-
 .modal {
   width: 528px;
   min-height: 581px;
@@ -750,12 +745,6 @@ ul {
   border-color: #2196f3;
 }
 
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
 .form-field:not(:first-child) {
   display: flex;
   flex-direction: column;
@@ -789,6 +778,11 @@ ul {
   border: 1px solid #2196f3;
   box-sizing: border-box;
   border-radius: 4px;
+}
+
+.input__form:hover .form-icon {
+  color: #2196f3;
+  background-color: teal;
 }
 
 .icon-item {
