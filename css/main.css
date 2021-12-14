@@ -697,6 +697,11 @@ ul {
   transition: opacity 1000ms, visibility 1000ms;
 }
 
+.backdrop.is-hidden .modal {
+  transform: scale(1.5) rotate(180deg) translate(1000px);
+  transition: transform 1000ms;
+}
+
 .modal {
   width: 528px;
   min-height: 581px;
@@ -743,6 +748,12 @@ ul {
 .modal-close:hover, .modal-close:focus {
   fill: #2196f3;
   border-color: #2196f3;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .form-field:not(:first-child) {
